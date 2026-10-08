@@ -15,11 +15,8 @@ parte de la entrega: si falta alguno, la entrega se sanciona con el 20 % de
 la nota.
 
 | Nombre completo | Código |
-|---|---|
-| | |
-| | |
-| | |
-| | |
+|Luis Angel Victoria Garcia | 2459529|
+
 
 ## Cómo está organizado el proyecto
 
