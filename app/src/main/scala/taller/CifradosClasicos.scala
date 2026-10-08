@@ -62,7 +62,23 @@ class CifradosClasicos {
    * Cuenta las letras minúsculas del mensaje, de mayor a menor frecuencia y,
    * en empate, en orden alfabético. El recorrido es recursivo de cola.
    */
-  def frecuencias(m: Mensaje): Frecuencias = ???
+  def frecuencias(m: Mensaje): Frecuencias = {
+    @tailrec
+    def contar(resto: Mensaje, acc: Map[Char, Int]): Map[Char, Int] =
+      if (resto.isEmpty) acc
+      else {
+
+        val c = resto.head
+        if (c >= 'a' && c <= 'z')
+          contar(resto.tail, acc + (c -> (acc.getOrElse(c, 0) + 1)))
+        else
+        contar(resto.tail, acc)
+
+     }  
+
+  contar(m, Map()).toList.sortBy { case (c, n) => (-n, c) }
+
+  }
 
   // Punto 4 -------------------------------------------------------------------
 
